@@ -2,13 +2,13 @@
 
 ## Common
 
-###bashrc
+### bashrc
 Adding docker host for podman
 Adding docker podman alias
 Adding oh-my-posh
 Adding eza alias
 
-###enable_thinkpad_wwan.sh
+### enable_thinkpad_wwan.sh
 Turns on WWAN adapter on Quectel EM120R-GL LTE
 
 ## Fedora
