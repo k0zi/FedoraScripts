@@ -37,7 +37,7 @@
           "foreground": "#797777",
           "background": "#1c2149",
           "powerline_symbol": " \ue0b0",
-          "template": " {{ if .SSHSession }} {{ end }}{{ .UserName }}@{{ .HostName }} "
+          "template": " {{ .UserName }} "
         },
         {
           "background": "#245083",
@@ -53,7 +53,7 @@
           "type": "path"
         },
         {
-          "background": "#98971A",
+          "background": "#b48a00",
           "background_templates": [
             "{{ if or (.Working.Changed) (.Staging.Changed) }}#FF9248{{ end }}",
             "{{ if and (gt .Ahead 0) (gt .Behind 0) }}#ff4500{{ end }}",
@@ -76,8 +76,8 @@
           "type": "git"
         },
         {
-          "background": "#FFDE57",
-          "foreground": "#111111",
+          "foreground": "#000000",
+          "background": "#1f8080",
           "powerline_symbol": "\ue0b0",
           "properties": {
             "display_mode": "files",
@@ -92,24 +92,12 @@
           "style": "powerline",
           "powerline_symbol": "\ue0b0",
           "foreground": "#000000",
-          "background": "#00ffff",
+          "background": "#1f8080",
           "template": "  {{ .Full }} "
         },
         {
-          "background": "#FEAC19",
-          "foreground": "#ffffff",
-          "powerline_symbol": "\ue0b0",
-          "properties": {
-            "display_mode": "files",
-            "fetch_version": false
-          },
-          "style": "powerline",
-          "template": " \uf0e7{{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }} ",
-          "type": "azfunc"
-        },
-        {
-          "background": "#ffff66",
-          "foreground": "#111111",
+          "background": "#8f1c1c",
+          "foreground": "#aa9d9d",
           "powerline_symbol": "\ue0b0",
           "style": "powerline",
           "template": " \uf0ad ",
@@ -119,7 +107,7 @@
       "type": "prompt"
     }
   ],
-  "console_title_template": "{{ .Folder }}",
+  "console_title_template": "{{ .UserName }} @ {{ .Folder }}",
   "final_space": true,
   "version": 3
 }
