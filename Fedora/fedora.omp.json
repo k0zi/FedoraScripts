@@ -2,6 +2,7 @@
   "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
   "blocks": [
     {
+      "alignment": "right",
       "segments": [
         {
           "background": "#838db9",
@@ -14,27 +15,9 @@
           "style": "powerline",
           "template": " {{ .FormattedMs }} ",
           "type": "executiontime"
-        },
-        {
-          "background": "#86BBD8",
-          "foreground": "#FFD700",
-          "invert_powerline": true,
-          "powerline_symbol": "\ue0b2",
-          "style": "powerline",
-          "template": " \u26a1",
-          "type": "root"
-        },
-        {
-          "background": "#86BBD8",
-          "foreground": "#ffffff",
-          "invert_powerline": true,
-          "powerline_symbol": "\ue0b2",
-          "style": "diamond",
-          "template": " {{ .UserName }} ",
-          "trailing_diamond": "\ue0b4",
-          "type": "session"
         }
-      ],
+      ]
+      ,
       "type": "rprompt"
     },
     {
@@ -47,6 +30,14 @@
           "style": "powerline",
           "template": "{{ if .WSL }}WSL at{{ end }} {{.Icon}} ",
           "type": "os"
+        },
+        {
+          "type": "session",
+          "style": "diamond",
+          "foreground": "#797777",
+          "background": "#1c2149",
+          "powerline_symbol": " \ue0b0",
+          "template": " {{ if .SSHSession }} {{ end }}{{ .UserName }}@{{ .HostName }} "
         },
         {
           "background": "#245083",
